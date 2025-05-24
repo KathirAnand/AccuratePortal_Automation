@@ -17,3 +17,31 @@
 16:54:07.526 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - Screenshot captured for Accurate Sync Page
 17:07:10.664 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - https://portal.incorp.asia/myportal/ URL Opened Successfully in chrome browser
 17:07:36.790 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - Screenshot captured for Accurate Sync Page
+17:05:37.755 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - https://portal.incorp.asia/myportal/ URL Opened Successfully in chrome browser
+17:06:03.439 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - Screenshot captured for Accurate Sync Page
+17:07:15.859 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - Screenshot captured for Accurate Sync Page
+16:49:31.974 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - https://portal.incorp.asia/myportal/ URL Opened Successfully in chrome browser
+16:49:53.372 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - Screenshot captured for Accurate Sync Page
+17:02:15.223 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - https://portal.incorp.asia/myportal/ URL Opened Successfully in chrome browser
+17:03:18.764 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - Screenshot captured for Accurate Sync Page
+17:04:27.678 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - Screenshot captured for Accurate Sync Page
+17:39:17.932 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - https://portal.incorp.asia/myportal/ URL Opened Successfully in chrome browser
+17:40:52.614 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - https://portal.incorp.asia/myportal/ URL Opened Successfully in chrome browser
+17:02:47.231 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - https://portal.incorp.asia/myportal/ URL Opened Successfully in chrome browser
+17:03:08.779 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - Screenshot captured for Accurate Sync Page
+17:04:07.613 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - Screenshot captured for Accurate Sync Page
+17:05:27.064 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - https://portal.incorp.asia/myportal/ URL Opened Successfully in chrome browser
+17:05:47.619 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - Screenshot captured for Accurate Sync Page
+17:06:14.468 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - Screenshot captured for Accurate Sync Page
+17:05:41.142 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - https://portal.incorp.asia/myportal/ URL Opened Successfully in chrome browser
+17:06:13.787 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - Screenshot captured for Accurate Sync Page
+17:08:17.734 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - Screenshot captured for Accurate Sync Page
+17:05:48.746 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - https://portal.incorp.asia/myportal/ URL Opened Successfully in chrome browser
+17:06:08.801 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - Total Number of Invoices are 8
+17:06:09.164 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - Screenshot captured for Accurate Sync Page
+17:06:09.399 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - All Invoices have the customer
+17:06:09.553 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - Check All Invoice Checkbox clicked sucessfully
+17:06:09.704 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - Check All Invoice Checkbox clicked sucessfully
+17:06:34.838 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - Alert accepted successfully
+17:06:34.839 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - Completed full Transfer Invoice process with alert handling
+17:06:38.122 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - Screenshot captured for Accurate Sync Page

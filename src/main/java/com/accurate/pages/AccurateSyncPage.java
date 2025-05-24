@@ -12,6 +12,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.accurate.automationBase.BaseClass;
+import com.accurate.utilities.EmailUtility;
 import com.accurate.utilities.ExtentReportUtility;
 
 public class AccurateSyncPage extends BasePage {
@@ -21,7 +23,9 @@ public class AccurateSyncPage extends BasePage {
 	}
 //	#lblHeading  -- page heading
 
-	int itemCount;
+	public static String screenshotPath;
+	public static int itemCount;
+	public static int balanceInvoiceCount;
 
 	@FindBy(xpath = "//div[@class='panel-body']/descendant::tbody/child::tr")
 	List<WebElement> customerRow;
@@ -43,7 +47,10 @@ public class AccurateSyncPage extends BasePage {
 
 	@FindBy(xpath = "//div[@class='rgWrap rgInfoPart']")
 	WebElement numberOfItemsTxt;
-
+	
+	@FindBy(xpath = "//div[text()='No records to display.']")
+	WebElement noRecordsFoundMessage;
+	
 	public AccurateSyncPage getItemsCount() {
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
@@ -57,13 +64,23 @@ public class AccurateSyncPage extends BasePage {
 		String noOfItemCount = numberOfItemsTxt.getText();
 		String[] parts = noOfItemCount.split("\\s+");
 		itemCount = Integer.parseInt(parts[6]);
-		System.out.println(noOfItemCount);
+		ExtentReportUtility.info("Total Number of Invoices are "+itemCount);
+		logger.info("Total Number of Invoices are "+itemCount);
+//		System.out.println(noOfItemCount);
 		return this;
 	}
 
+	public boolean isInvoicesToTransfer() {
+		boolean isAllInvoiceToTransfer = true;
+		if(itemCount==0) {
+			isAllInvoiceToTransfer = false;
+		}
+		return isAllInvoiceToTransfer;
+	}
+	
 	public AccurateSyncPage getPageSize() {
 		String pageSize = pageSizeInputField.getDomAttribute("value");
-		System.out.println(pageSize);
+//		System.out.println(pageSize);
 		if (itemCount > Integer.parseInt(pageSize)) {
 			clearAndType(pageSizeInputField, itemCount);
 			clickElement(changeBtn);
@@ -82,7 +99,7 @@ public class AccurateSyncPage extends BasePage {
 		System.out.println(customerRow.size());
 		for (WebElement customer : customerRow) {
 			List<WebElement> customerCol = customer.findElements(By.tagName("td"));
-			System.out.println(customerCol.size());
+//			System.out.println(customerCol.size());
 			WebElement accurateCustomer = customerCol.get(12);
 			WebElement customerCheckBox = customerCol.get(0);
 			if (accurateCustomer.getText().equals(" ")) {
@@ -103,6 +120,10 @@ public class AccurateSyncPage extends BasePage {
 				ExtentReportUtility.info(customerRow.indexOf(customer) + " Invoice does not have the customer");
 			}
 		}
+		if(isAllInvoiceHasCustomer) {
+			ExtentReportUtility.info("All Invoices have the customer");
+			logger.info("All Invoices have the customer");
+		}
 		return isAllInvoiceHasCustomer;
 	}
 
@@ -117,6 +138,7 @@ public class AccurateSyncPage extends BasePage {
 		waitForAlertAndAccept();
 
 		ExtentReportUtility.info("Completed full Transfer Customer process");
+		logger.info("Completed full Transfer Customer process");
 
 		return this;
 	}
@@ -124,14 +146,17 @@ public class AccurateSyncPage extends BasePage {
 	public AccurateSyncPage clickCheckAllCheckBox() {
 		clickElement(checkAllBtn);
 		ExtentReportUtility.info("Check All Invoice Checkbox clicked sucessfully");
+		logger.info("Check All Invoice Checkbox clicked sucessfully");
 //		takeScreenshot();
 		return this;
 	}
 
 	public AccurateSyncPage clickTransferInvoice() {
+		
 		clickElement(transferInvoiceBtn);
 		ExtentReportUtility.info("Transfer Invoice button clicked sucessfully");
-
+		logger.info("Transfer Invoice button clicked sucessfully");
+		
 		// Wait for loading cursor to disappear (using method from BasePage)
 		waitForLoadingCursorToInvisible();
 
@@ -139,6 +164,11 @@ public class AccurateSyncPage extends BasePage {
 		waitForAlertAndAccept();
 
 		ExtentReportUtility.info("Completed full Transfer Invoice process with alert handling");
+		logger.info("Completed full Transfer Invoice process with alert handling");
+		
+		if(itemCount>0) {
+			getBalanceInvoiceDetails();
+		}
 		return this;
 	}
 
@@ -160,9 +190,11 @@ public class AccurateSyncPage extends BasePage {
 			// Accept the alert
 			alert.accept();
 			ExtentReportUtility.info("Alert accepted successfully");
+			logger.info("Alert accepted successfully");
 
 		} catch (Exception e) {
 			ExtentReportUtility.info("Error while waiting for or accepting alert: " + e.getMessage());
+			logger.info(e.getMessage());
 		}
 	}
 
@@ -175,7 +207,7 @@ public class AccurateSyncPage extends BasePage {
 		try {
 
 			// Capture screenshot using your existing utility method
-			String screenshotPath = ExtentReportUtility.captureScreenshot(driver, "AccurateSyncPage");
+			screenshotPath = ExtentReportUtility.captureScreenshot(driver, "AccurateSyncPage");
 
 			// Add screenshot to the report
 			if (screenshotPath != null) {
@@ -189,14 +221,36 @@ public class AccurateSyncPage extends BasePage {
 					ExtentReportUtility.getTest().addScreenCaptureFromPath(screenshotPath);
 				} catch (Exception e) {
 					System.err.println("Error attaching screenshot to report: " + e.getMessage());
+					logger.info(e.getMessage());
 				}
 			}
 
 			return this;
 		} catch (Exception e) {
 			logger.error("Error verifying Accurate Sync Page load: " + e.getMessage());
+			logger.info(e.getMessage());
 			throw e; // Or handle as appropriate for your framework
 		}
 	}
+	
+	public void getBalanceInvoiceDetails() {
+		try {
+			Thread.sleep(Duration.ofSeconds(3));
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		String numberOfItems=driver.findElement(By.xpath("//div[@class='rgWrap rgInfoPart']")).getText();
+		
+		String[] parts = numberOfItems.split("\\s+");
+		int itemCount = Integer.parseInt(parts[6]);
+		if(itemCount>0) {
+			balanceInvoiceCount=driver.findElements(By.xpath("//div[@class='panel-body']/descendant::tbody/child::tr")).size();
+		}
+		
+	}
+	
 
 }
