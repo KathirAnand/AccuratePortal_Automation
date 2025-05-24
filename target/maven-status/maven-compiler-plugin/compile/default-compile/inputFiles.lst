@@ -1,0 +1,11 @@
+D:\GitHub\Accurate_Portal_Automation\src\main\java\com\accurate\automationBase\BaseClass.java
+D:\GitHub\Accurate_Portal_Automation\src\main\java\com\accurate\automationBase\FilePaths.java
+D:\GitHub\Accurate_Portal_Automation\src\main\java\com\accurate\pageActions\PageActions.java
+D:\GitHub\Accurate_Portal_Automation\src\main\java\com\accurate\pageActions\ProjectSpecificMethods.java
+D:\GitHub\Accurate_Portal_Automation\src\main\java\com\accurate\pages\AccurateSyncPage.java
+D:\GitHub\Accurate_Portal_Automation\src\main\java\com\accurate\pages\BasePage.java
+D:\GitHub\Accurate_Portal_Automation\src\main\java\com\accurate\pages\HomePage.java
+D:\GitHub\Accurate_Portal_Automation\src\main\java\com\accurate\pages\LoginPage.java
+D:\GitHub\Accurate_Portal_Automation\src\main\java\com\accurate\utilities\EmailUtility.java
+D:\GitHub\Accurate_Portal_Automation\src\main\java\com\accurate\utilities\ExtentReportListener.java
+D:\GitHub\Accurate_Portal_Automation\src\main\java\com\accurate\utilities\ExtentReportUtility.java

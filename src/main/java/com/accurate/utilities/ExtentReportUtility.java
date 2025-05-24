@@ -1,5 +1,6 @@
 package com.accurate.utilities;
 
+import com.accurate.automationBase.BaseClass;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
@@ -33,14 +34,13 @@ import com.aventstack.extentreports.model.Media;
 /**
  * Utility class to handle ExtentReport operations
  */
-public class ExtentReportUtility implements ITestListener{
+public class ExtentReportUtility extends BaseClass implements ITestListener{
 
 	
     private static ExtentReports extent;
     private static Map<Integer, ExtentTest> testMap = new HashMap<>();
     private static String reportDir;
-    private static String reportFilePath;
-
+   
     /**
      * Initialize the ExtentReport
      */

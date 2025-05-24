@@ -19,14 +19,13 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.AfterSuite;
 //import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
-import com.accurate.pageActions.ProjectSpecificMethods;
-import com.accurate.pages.HomePage;
+import com.accurate.pages.AccurateSyncPage;
 import com.accurate.utilities.EmailUtility;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -46,6 +45,8 @@ public class BaseClass {
 	public String propertiesFilePath;
 	protected Properties props;
 	public String configPath="";
+	protected static String reportFilePath;
+	
 	/**
 	 * Properties file and Logger is initialized at before suite
 	 * 
@@ -125,8 +126,17 @@ public class BaseClass {
 			e.printStackTrace();
 		}
 //		driver.close();
-		EmailUtility email = new EmailUtility();
-//		email.sendEmail();
 
+	}
+	
+	@AfterSuite
+	public void sendEmail() {
+		try {
+			EmailUtility email = new EmailUtility();
+			email.sendEmail(AccurateSyncPage.itemCount,AccurateSyncPage.balanceInvoiceCount,BaseClass.reportFilePath,AccurateSyncPage.screenshotPath);
+		}catch(Exception e) {
+			e.printStackTrace();
+//			logger.info(null, e.printStackTrace());
+		}
 	}
 }

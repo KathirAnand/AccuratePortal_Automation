@@ -13,7 +13,7 @@ import com.accurate.pages.LoginPage;
 
 @Listeners(com.accurate.utilities.ExtentReportListener.class)
 public class Accurate_TransferInvoiceAndCustomer extends BaseClass {
-	
+
 	@BeforeMethod
 	public void login() {
 		new LoginPage(driver).setUserName("Ushadevi").setPassword("Ushadevi@13").clickSignInBtn();
@@ -24,27 +24,30 @@ public class Accurate_TransferInvoiceAndCustomer extends BaseClass {
 			e.printStackTrace();
 		}
 	}
-	
+
 	@Test
 	public void accuratePortalInvoiceTransfer() {
-		AccurateSyncPage accSynPage=new AccurateSyncPage(driver);
-			new HomePage(driver)
-			.handlePopupAfterLogin()
-			.clickAccountingModuleBtn()
-			.clickAccurateSyncBtn()
-			.getItemsCount()
-			.getPageSize()
-			.takeScreenshot();
-			if(accSynPage.isAllInvoiceHasCustomer()) {
+		AccurateSyncPage accSynPage = new AccurateSyncPage(driver);
+		new HomePage(driver)
+		.handlePopupAfterLogin()
+		.clickAccountingModuleBtn()
+		.clickAccurateSyncBtn()
+		.getItemsCount();
+		if (accSynPage.isInvoicesToTransfer()) {
+			accSynPage.getPageSize();
+			if (accSynPage.isAllInvoiceHasCustomer()) {
 				accSynPage.clickCheckAllCheckBox()
-				.clickTransferInvoice();
-			}
-			else {
+				.clickTransferInvoice()
+				.takeScreenshot();
+			} else {
 				System.out.println("transfer customer");
 				accSynPage.clickTransferCustomer()
 				.clickCheckAllCheckBox()
-				.clickTransferInvoice();
+				.clickTransferInvoice()
+				.takeScreenshot();
 			}
+		}
+
 	}
-	
+
 }

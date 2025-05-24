@@ -1,0 +1,11 @@
+com\accurate\automationBase\FilePaths.class
+com\accurate\pageActions\ProjectSpecificMethods.class
+com\accurate\utilities\ExtentReportUtility.class
+com\accurate\pages\BasePage.class
+com\accurate\pages\AccurateSyncPage.class
+com\accurate\utilities\EmailUtility.class
+com\accurate\pageActions\PageActions.class
+com\accurate\automationBase\BaseClass.class
+com\accurate\pages\LoginPage.class
+com\accurate\pages\HomePage.class
+com\accurate\utilities\ExtentReportListener.class
