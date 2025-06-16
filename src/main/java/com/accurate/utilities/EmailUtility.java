@@ -138,10 +138,10 @@ public class EmailUtility extends BaseClass {
 		email.send();
 
 	}
-	public static void main(String[] args) {
-		EmailUtility eu = new EmailUtility();
-		eu.sendEmail(4,2,"D:\\GitHub\\Accurate_Portal_Automation\\test-output\\reports\\AccuratePortal_2025-05-22_17-05-35.html","D:\\GitHub\\Accurate_Portal_Automation\\test-output\\screenshots\\AccurateSyncPage_20250522_170811.png");
-	}
+//	public static void main(String[] args) {
+//		EmailUtility eu = new EmailUtility();
+//		eu.sendEmail(4,2,"D:\\GitHub\\Accurate_Portal_Automation\\test-output\\reports\\AccuratePortal_2025-05-22_17-05-35.html","D:\\GitHub\\Accurate_Portal_Automation\\test-output\\screenshots\\AccurateSyncPage_20250522_170811.png");
+//	}
 
 	public void sendEmail(int totalInvoice, int balanceInvoice, String reportPath, String screenshotPath,String screenshotPath2) {
 		Properties emailProps = new Properties();
@@ -296,7 +296,7 @@ public class EmailUtility extends BaseClass {
 	                        String cid = email.embed(imageFile);
 	                        imageSection = 
 	                            "<tr>" +
-	                                "<td style='padding: 20px 0; text-align: center;'>" +
+	                                "<td style='padding: 10px 0; text-align: center;'>" +
 	                                    "<img src='cid:" + cid + "' style='max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);' alt='Process Visualization'>" +
 	                                "</td>" +
 	                            "</tr>";
@@ -383,10 +383,8 @@ public class EmailUtility extends BaseClass {
 	                                                "</div>" +
 	                                            "</td>" +
 	                                        "</tr>" +
-	                                        
 	                                        "<!-- Image Section (if exists) -->" +
 	                                        imageSection +
-	                                        
 	                                        "<!-- Attachment Info -->" +
 	                                        (reportPath != null ? 
 	                                            "<tr>" +

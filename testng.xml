@@ -7,8 +7,10 @@
 	<test thread-count="5" name="Test">
 
 		<classes>
-			<class
-				name="com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer" />
+		<!--
+			<class name="com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer" />
+		 -->			
+			<class name="com.accurate.automationScripts.Accurate_Transfer"/>
 		</classes>
 	</test> <!--
 	Test -->

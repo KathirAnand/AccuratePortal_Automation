@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-23T17:05:44 IST" name="Suite" finished-at="2025-05-23T17:06:40 IST" duration-ms="55793">
+  <suite started-at="2025-06-11T17:04:33 IST" name="Suite" finished-at="2025-06-11T17:07:48 IST" duration-ms="194955">
     <groups>
     </groups>
-    <test started-at="2025-05-23T17:05:44 IST" name="Test" finished-at="2025-05-23T17:06:40 IST" duration-ms="55793">
-      <class name="com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer">
-        <test-method is-config="true" signature="setPropertiesAndLogger()[pri:0, instance:com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer@65e98b1c]" started-at="2025-05-23T17:05:43 IST" name="setPropertiesAndLogger" finished-at="2025-05-23T17:05:44 IST" duration-ms="847" status="PASS">
+    <test started-at="2025-06-11T17:04:33 IST" name="Test" finished-at="2025-06-11T17:07:48 IST" duration-ms="194955">
+      <class name="com.accurate.automationScripts.Accurate_Transfer">
+        <test-method is-config="true" signature="setPropertiesAndLogger()[pri:0, instance:com.accurate.automationScripts.Accurate_Transfer@44a59da3]" started-at="2025-06-11T17:04:33 IST" name="setPropertiesAndLogger" finished-at="2025-06-11T17:04:33 IST" duration-ms="899" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setPropertiesAndLogger -->
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer@65e98b1c]" started-at="2025-05-23T17:05:44 IST" name="launchBrowser" finished-at="2025-05-23T17:05:48 IST" duration-ms="4159" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.accurate.automationScripts.Accurate_Transfer@44a59da3]" started-at="2025-06-11T17:04:34 IST" name="launchBrowser" finished-at="2025-06-11T17:04:40 IST" duration-ms="5693" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method is-config="true" signature="login()[pri:0, instance:com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer@65e98b1c]" started-at="2025-05-23T17:05:48 IST" name="login" finished-at="2025-05-23T17:05:54 IST" duration-ms="5428" status="PASS">
+        <test-method signature="login()[pri:0, instance:com.accurate.automationScripts.Accurate_Transfer@44a59da3]" started-at="2025-06-11T17:04:40 IST" name="login" finished-at="2025-06-11T17:04:55 IST" duration-ms="15601" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="accuratePortalInvoiceTransfer()[pri:0, instance:com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer@65e98b1c]" started-at="2025-05-23T17:05:54 IST" name="accuratePortalInvoiceTransfer" finished-at="2025-05-23T17:06:38 IST" duration-ms="43763" status="PASS">
+        <test-method signature="accuratePortalInvoiceTransfer()[pri:0, instance:com.accurate.automationScripts.Accurate_Transfer@44a59da3]" started-at="2025-06-11T17:04:55 IST" name="accuratePortalInvoiceTransfer" finished-at="2025-06-11T17:07:46 IST" depends-on-methods="com.accurate.automationScripts.Accurate_Transfer.login" duration-ms="171082" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- accuratePortalInvoiceTransfer -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer@65e98b1c]" started-at="2025-05-23T17:06:38 IST" name="tearDown" finished-at="2025-05-23T17:06:40 IST" duration-ms="2007" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.accurate.automationScripts.Accurate_Transfer@44a59da3]" started-at="2025-06-11T17:07:46 IST" name="tearDown" finished-at="2025-06-11T17:07:48 IST" duration-ms="2016" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="sendEmail()[pri:0, instance:com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer@65e98b1c]" started-at="2025-05-23T17:06:40 IST" name="sendEmail" finished-at="2025-05-23T17:06:44 IST" duration-ms="3452" status="PASS">
+        <test-method is-config="true" signature="sendEmail()[pri:0, instance:com.accurate.automationScripts.Accurate_Transfer@44a59da3]" started-at="2025-06-11T17:07:49 IST" name="sendEmail" finished-at="2025-06-11T17:08:14 IST" duration-ms="25040" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sendEmail -->
-      </class> <!-- com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer -->
+      </class> <!-- com.accurate.automationScripts.Accurate_Transfer -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

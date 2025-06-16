@@ -1,0 +1,3 @@
+initialPassword=76ad6afb81434a4383c6b14b23d66b68
+userName=KathirInvent
+password=Invent@123

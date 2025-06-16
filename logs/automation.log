@@ -45,3 +45,88 @@
 17:06:34.838 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - Alert accepted successfully
 17:06:34.839 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - Completed full Transfer Invoice process with alert handling
 17:06:38.122 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - Screenshot captured for Accurate Sync Page
+17:02:06.675 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - https://portal.incorp.asia/myportal/ URL Opened Successfully in chrome browser
+17:02:33.498 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - Total Number of Invoices are 36
+17:04:04.605 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - All Invoices have the customer
+17:04:35.696 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - Check All Invoice Checkbox clicked sucessfully
+17:04:45.024 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - Transfer Invoice button clicked sucessfully
+17:05:30.234 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - Expected condition failed: waiting for alert to be present (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 136.0.7103.114, chrome: {chromedriverVersion: 136.0.7103.113 (76fa3c17824..., userDataDir: C:\Users\ADMINS~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57843}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57843/devtoo..., se:cdpVersion: 136.0.7103.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ee96917ef59f58f6f9639013367474d7
+17:05:30.235 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - Completed full Transfer Invoice process with alert handling
+17:07:04.849 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - Screenshot captured for Accurate Sync Page
+17:04:52.536 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - https://portal.incorp.asia/myportal/ URL Opened Successfully in chrome browser
+17:05:19.890 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - Total Number of Invoices are 22
+17:06:10.350 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - All Invoices have the customer
+17:06:10.556 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - Check All Invoice Checkbox clicked sucessfully
+17:06:10.737 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - Transfer Invoice button clicked sucessfully
+17:06:56.180 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - Expected condition failed: waiting for alert to be present (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.68, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\ADMINS~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56546}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56546/devtoo..., se:cdpVersion: 137.0.7151.68, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6cabc710d0560aaad9726106a64a0056
+17:06:59.283 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - Completed full Transfer Invoice process with alert handling
+23:33:53.563 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - https://portal.incorp.asia/myportal/ URL Opened Successfully in chrome browser
+23:33:54.991 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - Password mismatch
+23:43:22.304 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - https://portal.incorp.asia/myportal/ URL Opened Successfully in chrome browser
+00:05:44.235 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - https://portal.incorp.asia/myportal/ URL Opened Successfully in chrome browser
+00:22:27.098 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - https://portal.incorp.asia/myportal/ URL Opened Successfully in chrome browser
+21:32:22.440 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - https://portal.incorp.asia/myportal/ URL Opened Successfully in chrome browser
+22:00:13.423 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - https://portal.incorp.asia/myportal/ URL Opened Successfully in chrome browser
+22:06:27.592 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - https://portal.incorp.asia/myportal/ URL Opened Successfully in chrome browser
+22:10:10.374 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - https://portal.incorp.asia/myportal/ URL Opened Successfully in chrome browser
+22:24:34.666 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - https://portal.incorp.asia/myportal/ URL Opened Successfully in chrome browser
+22:37:24.562 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - https://portal.incorp.asia/myportal/ URL Opened Successfully in chrome browser
+22:56:46.550 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - https://portal.incorp.asia/myportal/ URL Opened Successfully in chrome browser
+23:07:05.737 [main] INFO  com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer - https://portal.incorp.asia/myportal/ URL Opened Successfully in chrome browser
+17:05:50.649 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - https://portal.incorp.asia/myportal/ URL Opened Successfully in chrome browser
+17:06:54.212 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - Total Number of Invoices are 7
+17:07:35.177 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - All Invoices have the customer
+17:07:51.423 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - Check All Invoice Checkbox clicked sucessfully
+17:07:55.972 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - Transfer Invoice button clicked sucessfully
+17:08:21.086 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - Alert accepted successfully
+17:08:24.187 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - Completed full Transfer Invoice process with alert handling
+17:08:49.388 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - Screenshot captured for Accurate Sync Page
+00:58:55.424 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - https://portal.incorp.asia/myportal/ URL Opened Successfully in chrome browser
+17:04:49.975 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - https://portal.incorp.asia/myportal/ URL Opened Successfully in chrome browser
+17:05:16.893 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - Total Number of Invoices are 8
+17:05:17.103 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - All Invoices have the customer
+17:05:17.272 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - Check All Invoice Checkbox clicked sucessfully
+17:05:17.432 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - Transfer Invoice button clicked sucessfully
+17:05:42.519 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - Alert accepted successfully
+17:05:45.631 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - Completed full Transfer Invoice process with alert handling
+17:05:45.880 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - Screenshot captured for Accurate Sync Page
+23:46:12.771 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - https://portal.incorp.asia/myportal/ URL Opened Successfully in chrome browser
+23:46:52.713 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - Total Number of Invoices are 1
+23:46:52.778 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - All Invoices have the customer
+23:46:52.965 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - Check All Invoice Checkbox clicked sucessfully
+23:46:53.216 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - Transfer Invoice button clicked sucessfully
+23:47:11.056 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - Alert accepted successfully
+23:47:14.119 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - Completed full Transfer Invoice process with alert handling
+23:47:14.263 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - Screenshot captured for Accurate Sync Page
+17:04:39.942 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - https://portal.incorp.asia/myportal/ URL Opened Successfully in chrome browser
+17:05:06.545 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - Total Number of Invoices are 23
+17:05:21.693 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - All Invoices have the customer
+17:05:34.575 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - Check All Invoice Checkbox clicked sucessfully
+17:05:50.521 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - Transfer Invoice button clicked sucessfully
+17:07:31.462 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - Expected condition failed: waiting for alert to be present (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\ADMINS~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58774}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58774/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0e0c37978522970f0fe23cc09c891d21
+17:07:42.175 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - Completed full Transfer Invoice process with alert handling
+17:07:46.851 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - Screenshot captured for Accurate Sync Page
+17:05:54.059 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - https://portal.incorp.asia/myportal/ URL Opened Successfully in chrome browser
+17:06:30.424 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - Total Number of Invoices are 5
+17:06:58.356 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - Alert accepted successfully
+17:06:58.358 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - Completed full Transfer Customer process
+17:06:58.836 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - Check All Invoice Checkbox clicked sucessfully
+17:06:59.033 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - Transfer Invoice button clicked sucessfully
+17:07:15.563 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - Alert accepted successfully
+17:07:18.617 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - Completed full Transfer Invoice process with alert handling
+17:07:18.735 [main] INFO  com.accurate.automationScripts.Accurate_Transfer - Screenshot captured for Accurate Sync Page

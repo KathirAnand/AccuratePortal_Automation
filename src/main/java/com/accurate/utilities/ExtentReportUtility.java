@@ -35,7 +35,6 @@ import com.aventstack.extentreports.model.Media;
  * Utility class to handle ExtentReport operations
  */
 public class ExtentReportUtility extends BaseClass implements ITestListener{
-
 	
     private static ExtentReports extent;
     private static Map<Integer, ExtentTest> testMap = new HashMap<>();
@@ -210,7 +209,9 @@ public class ExtentReportUtility extends BaseClass implements ITestListener{
             FileUtils.copyFile(source, new File(screenshotPath));
             
             // Return relative path for report
-            return "screenshots" + File.separator + screenshotName;
+//          return "screenshots" + File.separator + screenshotName;
+            return screenshotPath;
+            
         } catch (Exception e) {
             System.out.println("Error taking screenshot: " + e.getMessage());
             return null;

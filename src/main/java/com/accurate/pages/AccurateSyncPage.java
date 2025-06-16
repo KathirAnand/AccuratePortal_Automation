@@ -25,6 +25,7 @@ public class AccurateSyncPage extends BasePage {
 
 	public static String screenshotPath;
 	public static int itemCount;
+	public static int totalInvoices;
 	public static int balanceInvoiceCount;
 
 	@FindBy(xpath = "//div[@class='panel-body']/descendant::tbody/child::tr")
@@ -47,10 +48,10 @@ public class AccurateSyncPage extends BasePage {
 
 	@FindBy(xpath = "//div[@class='rgWrap rgInfoPart']")
 	WebElement numberOfItemsTxt;
-	
+
 	@FindBy(xpath = "//div[text()='No records to display.']")
 	WebElement noRecordsFoundMessage;
-	
+
 	public AccurateSyncPage getItemsCount() {
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
@@ -64,20 +65,25 @@ public class AccurateSyncPage extends BasePage {
 		String noOfItemCount = numberOfItemsTxt.getText();
 		String[] parts = noOfItemCount.split("\\s+");
 		itemCount = Integer.parseInt(parts[6]);
-		ExtentReportUtility.info("Total Number of Invoices are "+itemCount);
-		logger.info("Total Number of Invoices are "+itemCount);
+		ExtentReportUtility.info("Total Number of Invoices are " + itemCount);
+		logger.info("Total Number of Invoices are " + itemCount);
 //		System.out.println(noOfItemCount);
+		return this;
+	}
+
+	public AccurateSyncPage setInvoiceCount() {
+		totalInvoices = itemCount;
 		return this;
 	}
 
 	public boolean isInvoicesToTransfer() {
 		boolean isAllInvoiceToTransfer = true;
-		if(itemCount==0) {
+		if (itemCount == 0) {
 			isAllInvoiceToTransfer = false;
 		}
 		return isAllInvoiceToTransfer;
 	}
-	
+
 	public AccurateSyncPage getPageSize() {
 		String pageSize = pageSizeInputField.getDomAttribute("value");
 //		System.out.println(pageSize);
@@ -120,7 +126,7 @@ public class AccurateSyncPage extends BasePage {
 				ExtentReportUtility.info(customerRow.indexOf(customer) + " Invoice does not have the customer");
 			}
 		}
-		if(isAllInvoiceHasCustomer) {
+		if (isAllInvoiceHasCustomer) {
 			ExtentReportUtility.info("All Invoices have the customer");
 			logger.info("All Invoices have the customer");
 		}
@@ -152,22 +158,54 @@ public class AccurateSyncPage extends BasePage {
 	}
 
 	public AccurateSyncPage clickTransferInvoice() {
-		
+
 		clickElement(transferInvoiceBtn);
 		ExtentReportUtility.info("Transfer Invoice button clicked sucessfully");
 		logger.info("Transfer Invoice button clicked sucessfully");
-		
-		// Wait for loading cursor to disappear (using method from BasePage)
-		waitForLoadingCursorToInvisible();
+		int retryCount = 0;
+		if (itemCount > 30) {
+			if (retryCount == 0) {
+				try {
+					Thread.sleep(Duration.ofMinutes(2));
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+//				driver.navigate().refresh();
+//				backToDefaultFrame();
+//				HomePage home=new HomePage(driver);
+//				home.clickAccountingModuleBtn();
+//				home.clickAccurateSyncBtn();
+//				isAllInvoiceHasCustomer();
+//				clickCheckAllCheckBox();
+//				clickTransferInvoice();
+//				++retryCount;
+//				if(itemCount>0) {
+//					getBalanceInvoiceDetails();
+//				}
+			}
+		} else {
+			if (itemCount < 15) {
+				// Wait for loading cursor to disappear (using method from BasePage)
+				waitForLoadingCursorToInvisible();
 
-		// Wait for alert to be present and accept it
-		waitForAlertAndAccept();
+				// Wait for alert to be present and accept it
+				waitForAlertAndAccept();
 
-		ExtentReportUtility.info("Completed full Transfer Invoice process with alert handling");
-		logger.info("Completed full Transfer Invoice process with alert handling");
-		
-		if(itemCount>0) {
-			getBalanceInvoiceDetails();
+			} else {
+				addStaticWaitAsSeconds(40);
+				// Wait for loading cursor to disappear (using method from BasePage)
+				waitForLoadingCursorToInvisible();
+
+				// Wait for alert to be present and accept it
+				waitForAlertAndAccept();
+			}
+			if (itemCount > 0) {
+				getBalanceInvoiceDetails();
+			}
+
+			ExtentReportUtility.info("Completed full Transfer Invoice process with alert handling");
+			logger.info("Completed full Transfer Invoice process with alert handling");
 		}
 		return this;
 	}
@@ -210,21 +248,21 @@ public class AccurateSyncPage extends BasePage {
 			screenshotPath = ExtentReportUtility.captureScreenshot(driver, "AccurateSyncPage");
 
 			// Add screenshot to the report
-			if (screenshotPath != null) {
-				ExtentReportUtility.addScreenshot(screenshotPath, "Accurate Sync Page Loaded");
-				logger.info("Screenshot captured for Accurate Sync Page");
-			}
+//			if (screenshotPath != null) {
+//				ExtentReportUtility.addScreenshot(screenshotPath, "Accurate Sync Page Loaded");
+//				logger.info("Screenshot captured for Accurate Sync Page");
+//			}
 
-			// Add this to your screenshot method
+			// Add screenshot to the report
 			if (ExtentReportUtility.getTest() != null) {
 				try {
 					ExtentReportUtility.getTest().addScreenCaptureFromPath(screenshotPath);
+					logger.info("Screenshot captured for Accurate Sync Page");
 				} catch (Exception e) {
 					System.err.println("Error attaching screenshot to report: " + e.getMessage());
 					logger.info(e.getMessage());
 				}
 			}
-
 			return this;
 		} catch (Exception e) {
 			logger.error("Error verifying Accurate Sync Page load: " + e.getMessage());
@@ -232,7 +270,7 @@ public class AccurateSyncPage extends BasePage {
 			throw e; // Or handle as appropriate for your framework
 		}
 	}
-	
+
 	public void getBalanceInvoiceDetails() {
 		try {
 			Thread.sleep(Duration.ofSeconds(3));
@@ -240,17 +278,16 @@ public class AccurateSyncPage extends BasePage {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
-		String numberOfItems=driver.findElement(By.xpath("//div[@class='rgWrap rgInfoPart']")).getText();
-		
+
+		String numberOfItems = driver.findElement(By.xpath("//div[@class='rgWrap rgInfoPart']")).getText();
+
 		String[] parts = numberOfItems.split("\\s+");
 		int itemCount = Integer.parseInt(parts[6]);
-		if(itemCount>0) {
-			balanceInvoiceCount=driver.findElements(By.xpath("//div[@class='panel-body']/descendant::tbody/child::tr")).size();
+		if (itemCount > 0) {
+			balanceInvoiceCount = driver
+					.findElements(By.xpath("//div[@class='panel-body']/descendant::tbody/child::tr")).size();
 		}
-		
+
 	}
-	
 
 }

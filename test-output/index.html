@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +103,12 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer" class="method navigator-link" hash-for-method="accuratePortalInvoiceTransfer">accuratePortalInvoiceTransfer</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.accurate.automationScripts.Accurate_Transfer" class="method navigator-link" hash-for-method="accuratePortalInvoiceTransfer">accuratePortalInvoiceTransfer</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.accurate.automationScripts.Accurate_Transfer" class="method navigator-link" hash-for-method="login">login</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -121,7 +126,7 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer</span>
+              <span class="class-name">com.accurate.automationScripts.Accurate_Transfer</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -129,6 +134,13 @@
                   <a name="accuratePortalInvoiceTransfer">
                   </a> <!-- accuratePortalInvoiceTransfer -->
                   <span class="method-name">accuratePortalInvoiceTransfer</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="login">
+                  </a> <!-- login -->
+                  <span class="method-name">login</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -148,7 +160,7 @@
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer&quot;/&gt;
+      &lt;class name=&quot;com.accurate.automationScripts.Accurate_Transfer&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -188,16 +200,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'accuratePortalInvoiceTransfer')
-data.setCell(0, 2, 'com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer')
-data.setCell(0, 3, 43763);
+data.setCell(0, 2, 'com.accurate.automationScripts.Accurate_Transfer')
+data.setCell(0, 3, 171082);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'login')
+data.setCell(1, 2, 'com.accurate.automationScripts.Accurate_Transfer')
+data.setCell(1, 3, 15601);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 43 seconds</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -223,30 +239,30 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.accurate.automationScripts.Accurate_TransferInvoiceAndCustomer</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.accurate.automationScripts.Accurate_Transfer</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">setPropertiesAndLogger</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">launchBrowser</span>
-                <span class="method-start">1160 ms</span>
+                <span class="method-start">1337 ms</span>
               </div> <!-- configuration-test before -->
-              <div class="configuration-method before">
+              <div class="test-method">
                 <span class="method-name">login</span>
-                <span class="method-start">5438 ms</span>
-              </div> <!-- configuration-method before -->
+                <span class="method-start">7138 ms</span>
+              </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">accuratePortalInvoiceTransfer</span>
-                <span class="method-start">10867 ms</span>
+                <span class="method-start">22755 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">54636 ms</span>
+                <span class="method-start">193839 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <span class="method-name">sendEmail</span>
-                <span class="method-start">57118 ms</span>
+                <span class="method-start">196322 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

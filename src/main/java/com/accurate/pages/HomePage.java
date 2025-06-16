@@ -35,17 +35,18 @@ public class HomePage extends BasePage{
 //	  
 	
 	public HomePage clickAccountingModuleBtn() {
-		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-		 boolean frameExists = false;
-
-	        try {
-	            // Wait for frame 'workarea' and switch to it
-	            wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("main"));
-	            frameExists = true;
-	        } catch (TimeoutException e) {
-	            // Frame doesn't exist
-	            ExtentReportUtility.info("Frame 'workarea' was not found, so no popup to handle");
-	        }
+		toSideMenu();
+//		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+//		 boolean frameExists = false;
+//
+//	        try {
+//	            // Wait for frame 'workarea' and switch to it
+//	            wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("main"));
+//	            frameExists = true;
+//	        } catch (TimeoutException e) {
+//	            // Frame doesn't exist
+//	            ExtentReportUtility.info("Frame 'workarea' was not found, so no popup to handle");
+//	        }
 	        if(frameExists) {
 	        	WebElement ee=driver.findElement(By.xpath("(//td[text()='Accounting Module'])[2]"));
 	    		clickElement(ee);
@@ -62,11 +63,7 @@ public class HomePage extends BasePage{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		 try {
-	            driver.switchTo().defaultContent();
-	        } catch (Exception ex) {
-	            // Ignore
-	        }
+		backToDefaultFrame();
 		return new AccurateSyncPage(driver);
 	}
 	

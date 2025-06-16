@@ -84,6 +84,10 @@ public class BaseClass {
 			opt.setExperimentalOption("excludeSwitches", new String[] { "enable-automation" });
 			opt.addArguments("--disable-notifications");
 			opt.addArguments("--incognito");
+//			opt.addArguments("--headless=false");
+			opt.addArguments("--no-sandbox");
+			opt.addArguments("--disable-dev-shm-usage");
+			opt.addArguments("--disable-gpu");
 			Map<String, Object> prefs = new HashMap<String, Object>();
 			prefs.put("credentials_enable_service", false);
 			prefs.put("password_manager_enabled", false);
@@ -133,7 +137,7 @@ public class BaseClass {
 	public void sendEmail() {
 		try {
 			EmailUtility email = new EmailUtility();
-			email.sendEmail(AccurateSyncPage.itemCount,AccurateSyncPage.balanceInvoiceCount,BaseClass.reportFilePath,AccurateSyncPage.screenshotPath);
+			email.sendEmail(AccurateSyncPage.totalInvoices,AccurateSyncPage.balanceInvoiceCount,BaseClass.reportFilePath,AccurateSyncPage.screenshotPath);
 		}catch(Exception e) {
 			e.printStackTrace();
 //			logger.info(null, e.printStackTrace());
